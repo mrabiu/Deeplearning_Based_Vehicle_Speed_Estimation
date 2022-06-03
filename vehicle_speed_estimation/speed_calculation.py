@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Nov  4 19:26:40 2020
 
-@author: skasm
-"""
 import cv2
 import math
 import numpy as np
@@ -24,7 +20,6 @@ def estimateSpeed(location1, location2,maxWidth, maxHeight,bbox,class_name):
         d_meters = d_pixels *car_width/length_car_pixel_2
     
     
-    #print("d_pixels=" + str(d_pixels), "d_meters=" + str(d_meters))
     fps = 29
     
     speed = (d_meters * fps * 3.6)/5
@@ -72,4 +67,3 @@ def speed_estimation_module(frame,warped_,cars_list, track,bbox,maxWidth, maxHei
             #     cv2.putText(frame, '-',(int(bbox[0]), int(bbox[1])),0, 0.75, (0,255,0),2)
 
     return cars_list, frame
-# print (cars_list)
